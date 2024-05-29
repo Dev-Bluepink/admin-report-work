@@ -340,6 +340,8 @@ function Home() {
     },
   };
 
+  // console.log locasStorage.getItem("user");
+  console.log(localStorage.getItem("info"));
   return (
     <>
       <div className="layout-content">
