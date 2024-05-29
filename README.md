@@ -1,142 +1,143 @@
-# Mantis Free React Material UI Dashboard Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Download%20Mantis%20React%20-%20The%20professional%20Material%20designed%20React%20Admin%20Dashboard%20Template%20&url=https://mantisdashboard.io&via=codedthemes&hashtags=reactjs,webdev,developers,javascript)
+# [Muse Ant Design Dashboard](https://demos.creative-tim.com/muse-ant-design-dashboard/#/dashboard?ref=readme-madd)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/codedthemes/mantis-free-react-admin-template/blob/main/LICENSE)
-[![GitHub package version](https://img.shields.io/github/package-json/v/codedthemes/mantis-free-react-admin-template)](https://github.com/codedthemes/mantis-free-react-admin-template/)
+![version](https://img.shields.io/badge/version-1.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/muse-ant-design-dashboard.svg)](https://github.com/creativetimofficial/muse-ant-design-dashboard/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/material-tailwind-dashboard-react.svg?maxAge=2592000)](https://github.com/creativetimofficial/muse-ant-design-dashboard/issues?q=is%3Aissue+is%3Aclosed)
 
-Mantis is a free and open source React redux dashboard template made using the Material UI React component library with aim of flexibility and better customizability.
+![Image](https://s3.amazonaws.com/creativetim_bucket/products/496/original/opt_md_ant_react_thumbnail.jpg?1629182839)
 
-### Name Derived From Nature
+Muse Ant Design Dashboard is a _free_ Admin Template based on two popular front-end technologies: _Ant Design & React_. It was built to simplify the developer's work and is comes with a fresh design inspired by Ant Design. All its components are built to fit perfectly with each other, while aligning to the Ant Design concepts.
 
-Mantis Logo is inspired from the insect name - 'Mantises' as they have triangular heads with flexible Necks. Also, the name is derived from two popular UI frameworks, Material UI and Ant Design (M-Ant-is).
+Save weeks of time and build your perfect dashboard with this powerful template! It features 120 fully coded components and 7 example pages if you want to get inspiration or just show something directly to your clients. This beautiful admin also comes with 5 color filter choices for both the sidebar and the cards (blue, green, red, yellow and black), an option to have a transparent or fill sidebar and an option to have a fixed navbar.
 
-Mantis has Ant Design principal on top of the MAterial UI React component library.
+## Table of Contents
 
-:star: :star: :star: Support us by giving star (Top right of this page) if you like the theme :star: :star: :star:
-
-![mantis-free-react-dashboard-template.jpg](https://mantisdashboard.io/adv-banner-images/og-social-v1.1.0.png)
-
-The [Pro version](https://mantisdashboard.io) of Mantis react template includes features such as TypeScript, apps, authentication methods (i.e. JWT, Auth0, Firebase), advance components, form plugins, layouts, widgets, and more.
-
-| [Mantis Free](https://mantisdashboard.io/free) | [Mantis Pro](https://mantisdashboard.io)                                         |
-| ---------------------------------------------- | :------------------------------------------------------------------------------- |
-| **7** Demo pages                               | **85+** Demo pages                                                               |
-| -                                              | ✓ Multi-language                                                                 |
-| -                                              | ✓ Dark/Light Mode 🌓                                                             |
-| -                                              | ✓ TypeScript version                                                             |
-| -                                              | ✓ Design files (Figma)                                                           |
-| -                                              | ✓ Multiple color options                                                         |
-| -                                              | ✓ RTL                                                                            |
-| -                                              | ✓ JWT, Firebase, Auth0, AWS authentication                                       |
-| -                                              | ✓ [More components](https://mantisdashboard.io/components-overview/autocomplete) |
-| ✓ MIT License                                  | ✓ [Pro License](https://mui.com/store/license/)                                  |
-
-## Why Mantis?
-
-Mantis offers everything needed to build an advanced dashboard application. In the initial release, we included following high-end features,
-
-- Support React18.
-- Professional user interface.
-- Material UI React components.
-- Fully responsive, all modern browser supported.
-- Easy to use code structure
-- Flexible & high-Performance code
-- Simple documentation
-
-## Free Mantis React version
-
-#### Preview
-
-- [Demo](https://mantisdashboard.io/free)
-
-#### Download
-
-- [Download from GitHub](https://github.com/codedthemes/mantis-free-react-admin-template)
-
-## Mantis Pro version
-
-#### Preview
-
-- [Demo](https://mantisdashboard.io)
-
-#### Purchase
-
-- [Buy now](https://mui.com/store/items/mantis-react-admin-dashboard-template/)
-
-## Table of contents
-
-- [Getting started](#getting-started)
+- [Versions](#versions)
+- [Demo](#demo)
+- [Quick Start](#quick-start)
 - [Documentation](#documentation)
-- [Technology stack](#technology-stack)
-- [Author](#author)
-- [Issues?](#issues)
-- [License](#license)
-- [More Free React Templates](#more-free-react-material-admin-dashboard-templates)
-- [More Pro React Templates](#more-premium-react-material-admin-dashboard-templates)
-- [Follow us](#follow-us)
+- [File Structure](#file-structure)
+- [Browser Support](#browser-support)
+- [Resources](#resources)
+- [Reporting Issues](#reporting-issues)
+- [Technical Support or Questions](#technical-support-or-questions)
+- [Licensing](#licensing)
+- [Useful Links](#useful-links)
 
-## Getting Started
+## Versions
 
-1. Clone from Github
+[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/material-tailwind-dashboard-react?ref=readme-madd)
+React
 
-```
-git clone https://github.com/codedthemes/mantis-free-react-admin-template.git
-```
+## Demo
 
-2. Install packages
+- [Dashboard](https://demos.creative-tim.com/muse-ant-design-dashboard/#/dashboard?ref=readme-madd)
+- [Tables](https://demos.creative-tim.com/muse-ant-design-dashboard/#/tables?ref=readme-madd)
+- [Billing](https://demos.creative-tim.com/muse-ant-design-dashboard/#/billing?ref=readme-madd)
+- [RTL](https://demos.creative-tim.com/muse-ant-design-dashboard/#/rtl?ref=readme-madd)
+- [Profile](https://demos.creative-tim.com/muse-ant-design-dashboard/#/profile?ref=readme-madd)
+- [Sign In](https://demos.creative-tim.com/muse-ant-design-dashboard/#/sign-in?ref=readme-madd)
+- [Sign Up](https://demos.creative-tim.com/muse-ant-design-dashboard/#/sign-up?ref=readme-madd)
 
-```
-yarn
-```
+## Quick start
 
-3. Run project
+Quick start options:
 
-```
-yarn start
-```
+- Download from [Creative Tim](https://www.creative-tim.com/product/muse-ant-design-dashboard?ref=readme-madd).
+
+## Terminal Commands
+
+1. Download and Install NodeJs LTS version from [NodeJs Official Page](https://nodejs.org/en/download/).
+2. Navigate to the root / directory and run npm install or (yarn install, if you're using yarn) to install our local dependencies.
 
 ## Documentation
 
-[Mantis documentation](https://codedthemes.gitbook.io/mantis/) helps you out in all aspects from Installation to deployment.
+Muse Ant Design Dashboard build using Material Tailwind and the documentation of Material Tailwind is hosted at [website](https://demos.creative-tim.com/muse-ant-design-dashboard/#/docs/overview?ref=readme-madd).
 
-## Technology stack
+### What's included
 
-- [Material UI V5](https://mui.com/core/)
-- Built with React Hooks API.
-- React context API for state management.
-- Redux toolkit.
-- React Router for navigation routing.
-- Support for Vite.
-- Code splitting.
-- CSS-in-JS.
+Within the download you'll find the following directories and files:
 
-## Author
+```
+Muse Ant Design Dashboard
+    ├── muse-ant-design-dashboard
+    │   ├── public
+    │   │   ├── index.html
+    │   │   ├── favicon.png
+    │   │   ├── minifest.json
+    │   │   └── robots.txt
+    │   ├── src
+    │   │   ├── assets
+    │   │   │   ├── images
+    │   │   │   └── styles
+    │   │   ├── components
+    │   │   │   ├── chart
+    │   │   │   └── layout
+    │   │   ├── pages
+    │   │   │   ├── Billing.js
+    │   │   │   ├── Home.js
+    │   │   │   ├── Profile.js
+    │   │   │   ├── Rtl.js
+    │   │   │   ├── SignIn.js
+    │   │   │   ├── SignUp.js
+    │   │   │   └── Tables.js
+    │   │   ├── App.js
+    │   │   └── index.js
+    │   ├── CHANGELOG.md
+    │   ├── LICENSE
+    │   ├── package.json
+    │   ├── README.md
+    │   ├── .env
+```
 
-Mantis is managed by team [CodedThemes](https://codedthemes.com).
+## Browser Support
 
-## Issues
+At present, we officially aim to support the last two versions of the following browsers:
 
-Please generate a [GitHub issue](https://github.com/codedthemes/mantis-free-react-admin-template/issues) if you found a bug in any version. We are try our best to resolve the issue.
+<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
 
-## License
+## Resources
 
-- Licensed under [MIT](https://github.com/codedthemes/datta-able-bootstrap-dashboard/blob/master/LICENSE)
+- [Live Preview](https://demos.creative-tim.com/muse-ant-design-dashboard/#/?ref=readme-madd)
+- [Download Page](https://www.creative-tim.com/product/material-tailwind-dashboard-react?ref=readme-madd)
+- Documentation is [here](https://material-tailwind.com/documentation/quick-start?ref=readme-madd)
+- [License Agreement](https://www.creative-tim.com/license?ref=readme-madd)
+- [Support](https://www.creative-tim.com/contact-us?ref=readme-madd)
+- Issues: [Github Issues Page](https://github.com/creativetimofficial/muse-ant-design-dashboard/issues)
 
-## More Free React Material Admin Dashboard Templates
+## Reporting Issues
 
-- [Free Materially](https://codedthemes.com/item/materially-free-reactjs-admin-template/)
-- [Free Berry](https://mui.com/store/items/berry-react-material-admin-free/)
+We use GitHub Issues as the official bug tracker for the Muse Ant Design Dashboard. Here are some advices for our users that want to report an issue:
 
-## More premium React Material Admin Dashboard Templates
+1. Make sure that you are using the latest version of the Muse Ant Design Dashboard. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/product/muse-ant-design-dashboard?ref=readme-madd).
+2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
+3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
 
-- [Materially](https://codedthemes.com/item/materially-reactjs-admin-dashboard/)
-- [Berry](https://mui.com/store/items/berry-react-material-admin/)
+## Technical Support or Questions
 
-## Follow us
+If you have questions or need help integrating the product please [contact us](https://www.creative-tim.com/contact-us?ref=readme-madd) instead of opening an issue.
 
-- Website [https://mantisdashboard.io](https://mantisdashboard.io)
-- Blog [https://blog.mantisdashboard.io](https://blog.mantisdashboard.io)
-- CodedThemes [https://codedthemes.com](https://codedthemes.com)
-- Dribbble [https://dribbble.com/codedthemes](https://dribbble.com/codedthemes)
-- Facebook [https://www.facebook.com/codedthemes](https://www.facebook.com/codedthemes)
-- Twitter [https://twitter.com/codedthemes](https://twitter.com/codedthemes)
+## Licensing
+
+- Copyright 2021 [Creative Tim](https://www.creative-tim.com?ref=readme-madd)
+- Creative Tim [license](https://www.creative-tim.com/license?ref=readme-madd)
+
+## Useful Links
+
+- [More products](https://www.creative-tim.com/templates?ref=readme-madd) from Creative Tim
+
+- [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
+
+- [Freebies](https://www.creative-tim.com/templates/free?ref=readme-madd) from Creative Tim
+
+- [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=readme-madd) (earn money)
+
+##### Social Media
+
+Twitter: <https://twitter.com/CreativeTim>
+
+Facebook: <https://www.facebook.com/CreativeTim>
+
+Dribbble: <https://dribbble.com/creativetim>
+
+Google+: <https://plus.google.com/+CreativetimPage>
+
+Instagram: <https://instagram.com/creativetimofficial>
