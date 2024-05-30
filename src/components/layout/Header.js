@@ -423,7 +423,16 @@ function Header({
           </Drawer>
           <Link to="/sign-in" className="btn-sign-in">
             {profile}
-            <span>Log out</span>
+            <Button
+              type="primary"
+              onClick={() => {
+                localStorage.removeItem("info");
+                localStorage.removeItem("token");
+                localStorage.removeItem("role");
+              }}
+            >
+              <span>Log out</span>
+            </Button>
           </Link>
           <Input
             className="header-search"

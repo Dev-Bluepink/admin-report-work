@@ -65,7 +65,7 @@ export default class SignIn extends Component {
         console.log("Success:", values);
         localStorage.setItem("info", JSON.stringify(data.data));
 
-        window.location.href = "/tables";
+        window.location.href = "/report";
       } catch (error) {
         console.error(error);
       }
