@@ -11,7 +11,7 @@
 */
 import { useState } from "react";
 
-import { Row, Col, Input, DatePicker } from "antd";
+import { Row, Col, Input, DatePicker, Button } from "antd";
 
 import { Card, Avatar } from "antd";
 
@@ -28,11 +28,24 @@ function Report() {
 
   const idUser = JSON.parse(infoUser)._id;
   // định dạng 24-09-2021
-  const [date, setDate] = useState("24-09-2021"); // [day-month-year
+  const [date, setDate] = useState("");
   const [reportToday, setReportToday] = useState("");
   const [reportTomorrow, setReportTomorrow] = useState("");
+  const [today, setToday] = useState("");
+  const [tomorrow, setTomorrow] = useState("");
 
-  console.log(idUser);
+  //  call api https://report-work.onrender.com/report/input" và lần đầu sẽ hiện thị báo cáo hôm nay và ngày mai
+  //  method: "POST",
+  //  headers: {
+  //    "Content-Type": "application/json",
+  //  },
+  //  body: JSON.stringify({
+  //    idUser: idUser,
+  //    date: date,
+  //    reportToday: reportToday,
+  //    reportTomorrow: reportTomorrow,
+  //  }),
+  // })
 
   useEffect(() => {
     axios
@@ -40,12 +53,27 @@ function Report() {
         `https://report-work.onrender.com/report?date=${date}&idUser=${idUser}`
       )
       .then((res) => {
-        // Update the state variables with the response data
-        setReportToday(res.data.todayReport);
-        setReportTomorrow(res.data.tomorrowReport);
-      })
-      .catch((err) => console.log(err));
+        console.log(res.data);
+        setReportToday(res.data.today);
+        setReportTomorrow(res.data.tomorrow);
+      });
   }, [date, idUser]);
+
+  console.log(reportToday);
+
+  const handleSave = () => {
+    // https://report-work.onrender.com/report/input
+    axios
+      .post("https://report-work.onrender.com/report/input", {
+        idUser: idUser,
+        date: date,
+        today: reportToday,
+        tomorrow: reportTomorrow,
+      })
+      .then((res) => {
+        console.log(res.data);
+      });
+  };
 
   return (
     <>
@@ -104,14 +132,15 @@ function Report() {
             onChange={(date, dateString) => setDate(dateString)}
             style={{
               width: "100%",
+              marginBottom: "20px",
             }}
           />
+          {/* // hiện thị báo cáo hôm nay và có thể chỉnh sửa */}
           <TextArea
             placeholder="Báo cáo hôm nay"
             style={{
               height: "200px",
             }}
-            // Set the value to the state variable and update the state on change
             value={reportToday}
             onChange={(e) => setReportToday(e.target.value)}
           />
@@ -123,10 +152,14 @@ function Report() {
             style={{
               height: "200px",
             }}
-            // Set the value to the state variable and update the state on change
             value={reportTomorrow}
             onChange={(e) => setReportTomorrow(e.target.value)}
           />
+        </Col>
+        <Col span={24} style={{ marginBottom: "20px" }}>
+          <Button type="primary" onClick={handleSave}>
+            Lưu
+          </Button>
         </Col>
       </Row>
     </>
