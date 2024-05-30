@@ -18,6 +18,7 @@ import Rtl from "./pages/Rtl";
 import Profile from "./pages/Profile";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
+import GetReports from "./pages/GetReports";
 import Main from "./components/layout/Main";
 import "antd/dist/antd.css";
 import "./assets/styles/main.css";
@@ -34,9 +35,11 @@ function App() {
           <Route exact path="/tables" component={Tables} />
           <Route exact path="/billing" component={Billing} />
           <Route exact path="/report" component={Report} />
+          <Route exact path="/get-reports" component={GetReports} />
           <Route exact path="/rtl" component={Rtl} />
           <Route exact path="/profile" component={Profile} />
-          <Redirect from="*" to="/dashboard" />
+
+          {/* <Redirect from="*" to="/dashboard" /> */}
         </Main>
       </Switch>
     </div>

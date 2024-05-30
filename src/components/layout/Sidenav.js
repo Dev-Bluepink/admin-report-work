@@ -204,6 +204,20 @@ function Sidenav({ color }) {
             <span className="label">Báo cáo</span>
           </NavLink>
         </Menu.Item>
+
+        <Menu.Item key="4">
+          <NavLink to="/get-reports">
+            <span
+              className="icon"
+              style={{
+                background: page === "AllReport" ? color : "",
+              }}
+            >
+              ABC
+            </span>
+            <span className="label">Báo cáo tổng</span>
+          </NavLink>
+        </Menu.Item>
         {/* <Menu.Item className="menu-item-header" key="5">
           Account Pages
         </Menu.Item>
