@@ -23,6 +23,7 @@ import Main from "./components/layout/Main";
 import "antd/dist/antd.css";
 import "./assets/styles/main.css";
 import "./assets/styles/responsive.css";
+import CreateUpdate from "./pages/CreateUpdate";
 
 function App() {
   return (
@@ -38,7 +39,7 @@ function App() {
           <Route exact path="/get-reports" component={GetReports} />
           <Route exact path="/rtl" component={Rtl} />
           <Route exact path="/profile" component={Profile} />
-
+          <Route exact path="/create-account" component={CreateUpdate} />
           {/* <Redirect from="*" to="/dashboard" /> */}
         </Main>
       </Switch>
