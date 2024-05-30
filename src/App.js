@@ -20,6 +20,7 @@ import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import GetReports from "./pages/GetReports";
 import Main from "./components/layout/Main";
+import ProtectedRoute from "./ProtectedRoute";
 import "antd/dist/antd.css";
 import "./assets/styles/main.css";
 import "./assets/styles/responsive.css";
@@ -32,14 +33,18 @@ function App() {
         <Route path="/sign-up" exact component={SignUp} />
         <Route path="/sign-in" exact component={SignIn} />
         <Main>
-          <Route exact path="/dashboard" component={Home} />
-          <Route exact path="/tables" component={Tables} />
-          <Route exact path="/billing" component={Billing} />
-          <Route exact path="/report" component={Report} />
-          <Route exact path="/get-reports" component={GetReports} />
-          <Route exact path="/rtl" component={Rtl} />
-          <Route exact path="/profile" component={Profile} />
-          <Route exact path="/create-account" component={CreateUpdate} />
+          <ProtectedRoute exact path="/dashboard" component={Home} />
+          <ProtectedRoute exact path="/tables" component={Tables} />
+          <ProtectedRoute exact path="/billing" component={Billing} />
+          <ProtectedRoute exact path="/report" component={Report} />
+          <ProtectedRoute exact path="/get-reports" component={GetReports} />
+          <ProtectedRoute exact path="/rtl" component={Rtl} />
+          <ProtectedRoute exact path="/profile" component={Profile} />
+          <ProtectedRoute
+            exact
+            path="/create-account"
+            component={CreateUpdate}
+          />
           {/* <Redirect from="*" to="/dashboard" /> */}
         </Main>
       </Switch>

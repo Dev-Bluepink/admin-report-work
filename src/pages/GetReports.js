@@ -189,7 +189,7 @@ function GetReports() {
                     textAlign: "left",
                   }}
                 >
-                  {item.code}
+                  {item.msnv}
                 </td>
                 <td
                   style={{

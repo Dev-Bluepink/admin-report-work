@@ -171,11 +171,8 @@ function CreateUpdate() {
                       border: "none",
                     }}
                   >
-                    <Select.Option value="lucy">Nhân viên</Select.Option>
-                    <Select.Option value="Yiminghe">
-                      Quản trị viên
-                    </Select.Option>
-                    <Select.Option value="Yiminghe">Giám đốc</Select.Option>
+                    <Select.Option value="user">Nhân viên</Select.Option>
+                    <Select.Option value="admin">Quản trị viên</Select.Option>
                   </Select>
                 </div>
               </Avatar.Group>
