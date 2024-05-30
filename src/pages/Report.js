@@ -28,24 +28,13 @@ function Report() {
 
   const idUser = JSON.parse(infoUser)._id;
   // định dạng 24-09-2021
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState(
+    moment().format("YYYY-MM-DD") || moment().format("YYYY-MM-DD")
+  );
   const [reportToday, setReportToday] = useState("");
   const [reportTomorrow, setReportTomorrow] = useState("");
   const [today, setToday] = useState("");
   const [tomorrow, setTomorrow] = useState("");
-
-  //  call api https://report-work.onrender.com/report/input" và lần đầu sẽ hiện thị báo cáo hôm nay và ngày mai
-  //  method: "POST",
-  //  headers: {
-  //    "Content-Type": "application/json",
-  //  },
-  //  body: JSON.stringify({
-  //    idUser: idUser,
-  //    date: date,
-  //    reportToday: reportToday,
-  //    reportTomorrow: reportTomorrow,
-  //  }),
-  // })
 
   useEffect(() => {
     axios
@@ -128,8 +117,8 @@ function Report() {
           <h3>Báo cáo hôm nay</h3>
           <DatePicker
             // lấy mặc định ngày hiện tại
-            defaultValue={moment()}
-            onChange={(date, dateString) => setDate(dateString)}
+            defaultValue={moment() || date}
+            onChange={(date, dateString) => setDate(dateString || moment())}
             style={{
               width: "100%",
               marginBottom: "20px",
