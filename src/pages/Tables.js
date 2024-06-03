@@ -21,26 +21,21 @@ import {
   Button,
   Avatar,
   Typography,
+  Input,
+  Form,
+  Spin,
 } from "antd";
 
 import { ToTopOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
 // Images
-import ava1 from "../assets/images/logo-shopify.svg";
-import ava2 from "../assets/images/logo-atlassian.svg";
-import ava3 from "../assets/images/logo-slack.svg";
-import ava5 from "../assets/images/logo-jira.svg";
-import ava6 from "../assets/images/logo-invision.svg";
-import face from "../assets/images/face-1.jpg";
+
 import face2 from "../assets/images/face-2.jpg";
-import face3 from "../assets/images/face-3.jpg";
-import face4 from "../assets/images/face-4.jpg";
-import face5 from "../assets/images/face-5.jpeg";
-import face6 from "../assets/images/face-6.jpeg";
-import pencil from "../assets/images/pencil.svg";
+
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Modal from "antd/lib/modal/Modal";
 
 const { Title } = Typography;
 
@@ -94,59 +89,56 @@ const columns = [
 
 function Tables() {
   const [data1, setData1] = useState([]);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [editingUser, setEditingUser] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [form] = Form.useForm();
   useEffect(() => {
     axios.get("https://report-work.onrender.com/user").then((res) => {
       setData1(res.data);
     });
   }, []);
 
-  //  tôi muốn data trả về giống như sau
+  const showModal = (user) => {
+    setLoading(true);
+    axios
+      .get(`https://report-work.onrender.com/user/detail?idUser=${user._id}`)
+      .then((res) => {
+        setEditingUser(res.data);
+        form.setFieldsValue(res.data);
+        setIsModalVisible(true);
+      })
+      .catch((error) => {
+        console.error(error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
 
-  // const data = [
-  //   {
-  //     key: "1",
-  //     name: (
-  //       <>
-  //         <Avatar.Group>
-  //           <Avatar
-  //             className="shape-avatar"
-  //             shape="square"
-  //             size={40}
-  //             src={face2}
-  //           ></Avatar>
-  //           <div className="avatar-info">
-  //             <Title level={5}>Michael John</Title>
-  //             <p>michael@mail.com</p>
-  //           </div>
-  //         </Avatar.Group>{" "}
-  //       </>
-  //     ),
-  //     function: (
-  //       <>
-  //         <div className="author-info">
-  //           <Title level={5}>Manager</Title>
-  //           <p>Organization</p>
-  //         </div>
-  //       </>
-  //     ),
+  const handleOk = () => {
+    setLoading(true);
+    const values = form.getFieldsValue();
+    // id lấy từ editingUser
+    values.id = editingUser._id;
+    axios
+      .put("https://report-work.onrender.com/user/edit", values)
+      .then((res) => {
+        message.success("User updated successfully");
+        setIsModalVisible(false);
+      })
+      .catch((error) => {
+        console.error(error);
+        message.error("Failed to update user");
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
 
-  //     status: (
-  //       <>
-  //         <Button type="primary" className="tag-primary">
-  //           ONLINE
-  //         </Button>
-  //       </>
-  //     ),
-  //     employed: (
-  //       <>
-  //         <div className="ant-employed">
-  //           <span>23/04/18</span>
-  //           <a href="#pablo">Edit</a>
-  //         </div>
-  //       </>
-  //     ),
-  //   },
-  // ];
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
 
   const data = data1.map((item) => {
     return {
@@ -187,9 +179,9 @@ function Tables() {
       ),
       employed: (
         <>
-          <div className="ant-employed">
-            <a href="#pablo">Edit</a>
-          </div>
+          <Button type="primary" onClick={() => showModal(item)}>
+            Edit
+          </Button>
         </>
       ),
     };
@@ -225,6 +217,34 @@ function Tables() {
           </Col>
         </Row>
       </div>
+      <Modal
+        title="Edit User"
+        visible={isModalVisible}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
+        {loading ? (
+          <Spin />
+        ) : (
+          <Form form={form}>
+            <Form.Item name="name" label="Name">
+              <Input />
+            </Form.Item>
+            <Form.Item name="email" label="Email">
+              <Input />
+            </Form.Item>
+            <Form.Item name="position" label="Position">
+              <Input />
+            </Form.Item>
+            <Form.Item name="role" label="Role">
+              <Radio.Group>
+                <Radio value="admin">Admin</Radio>
+                <Radio value="user">User</Radio>
+              </Radio.Group>
+            </Form.Item>
+          </Form>
+        )}
+      </Modal>
     </>
   );
 }
