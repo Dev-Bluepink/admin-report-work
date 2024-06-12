@@ -69,7 +69,9 @@ function Sidenav({ color }) {
   //  lưu thông tin role từ localstorage
   const info = JSON.parse(localStorage.getItem("info"));
 
-  const role = info?.role;
+  const role = info?.data.role;
+
+  console.log("role", role);
   return (
     <>
       <div className="brand">

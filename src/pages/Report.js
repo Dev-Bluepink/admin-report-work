@@ -26,7 +26,10 @@ function Report() {
   const infoUser = localStorage.getItem("info");
   //  tôi muốn call gẻ api vào trang report truyền id và ngày https://report-work.onrender.com/report?date=1&idUser=1
 
-  const idUser = JSON.parse(infoUser)._id;
+  const idUser = JSON.parse(infoUser).data._id;
+  // infoUser {"status":200,"message":"Đăng nhập thành công","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjU4NmMwZWRlYmM5ZjUxMTQzNjAyZTEiLCJpYXQiOjE3MTgxNzk5NzR9.6zUoY0KDIqttttRC31oJk44JoOc8w14kENWnJUBeHkk","data":{"_id":"66586c0edebc9f51143602e1","username":"admin","password":"$2b$10$42Okh9fQEgVZcTiWnyMnXuh.vthxTV.FrAe1cVfnjVAIU/.snUSQW","role":"admin","status":"active","resigter":false,"name":"admin","msnv":"admin","avatar":null,"position":"admin","department":"admin","createdAt":"2024-05-30T12:07:42.085Z","updatedAt":"2024-06-03T09:45:17.156Z","__v":0,"email":"admin"}}
+  //  in ra id của user
+  console.log("idUser", idUser);
   // định dạng 24-09-2021
   const [date, setDate] = useState(
     moment().format("YYYY-MM-DD") || moment().format("YYYY-MM-DD")

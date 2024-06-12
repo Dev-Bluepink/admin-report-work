@@ -46,12 +46,10 @@ const login = async (username, password) => {
       }
     );
 
-    if (response.status === 200) {
-      console.log("Login successful");
-      return response.data;
-    } else {
-      console.log("Login failed");
-    }
+    console.log(response);
+    localStorage.setItem("info", JSON.stringify(response.data));
+    console.log(response.data);
+    return response;
   } catch (error) {
     console.error(error);
   }
@@ -63,7 +61,6 @@ export default class SignIn extends Component {
         const data = await login(values.username, values.password || "");
         console.log(data);
         console.log("Success:", values);
-        localStorage.setItem("info", JSON.stringify(data.data));
 
         window.location.href = "/report";
       } catch (error) {
